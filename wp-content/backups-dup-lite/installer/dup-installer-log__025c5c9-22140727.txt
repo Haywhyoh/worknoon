@@ -1,0 +1,1362 @@
+********************************************************************************
+* DUPLICATOR LITE: Install-Log
+* STEP-0 START @ 04:17:56
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ ORIGINAL SERVER                        |CURRENT SERVER
+OS__________________: Linux                                 |Darwin
+PHP VERSION_________: 8.2.10                                |7.4.33
+********************************************************************************
+CURRENT SERVER INFO
+PHP_________________: 7.4.33 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+ARCHITECTURE________: 64-bit
+SERVER______________: Apache/2.4.54 (Unix) OpenSSL/1.0.2u PHP/7.4.33 mod_wsgi/3.5 Python/2.7.18 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1
+DOC ROOT____________: "/Applications/MAMP/htdocs/worknoon"
+REQUEST URL_________: "http://localhost/worknoon"
+********************************************************************************
+OVERWRITE PARAMS
+ *** FROM PACKAGE
+PARAM SET KEY[blogname]
+********************************************************************************
+MAINTENANCE MODE DISABLE
+INSTALLER INFO
+
+TEMPLATE____________: "base"
+VALIDATE ON START___: "normal"
+PATH_NEW____________: "/Applications/MAMP/htdocs/worknoon"
+URL_NEW_____________: "http://localhost/worknoon"
+********************************************************************************
+ARCHIVE INFO
+
+ARCHIVE NAME________: "/Applications/MAMP/htdocs/worknoon/Second_Backup_[HASH]_20230922140727_archive.zip"
+ARCHIVE SIZE________: 300.07MB
+CREATED_____________: 2023-09-22 14:07:27
+WP VERSION__________: 6.3.1
+DUP VERSION_________: 1.5.5.1
+LICENSE_____________: Free version
+DB VERSION__________: 5.7.23
+DB FILE SIZE________: 46.92MB
+DB TABLES___________: 57
+DB ROWS_____________: 48298
+URL HOME____________: https://worknoon.com
+URL CORE____________: https://worknoon.com
+URL CONTENT_________: https://worknoon.com/wp-content
+URL UPLOAD__________: https://worknoon.com/wp-content/uploads
+URL PLUGINS_________: https://worknoon.com/wp-content/plugins
+URL MU PLUGINS______: https://worknoon.com/wp-content/mu-plugins
+URL THEMES__________: https://worknoon.com/wp-content/themes
+PATH HOME___________: /home4/jjadeymy/public_html/.website_e2445dff
+PATH ABS____________: /home4/jjadeymy/public_html/.website_e2445dff
+PATH WPCONFIG_______: /home4/jjadeymy/public_html/.website_e2445dff
+PATH WPCONTENT______: /home4/jjadeymy/public_html/.website_e2445dff/wp-content
+PATH UPLOADS________: /home4/jjadeymy/public_html/.website_e2445dff/wp-content/uploads
+PATH PLUGINS________: /home4/jjadeymy/public_html/.website_e2445dff/wp-content/plugins
+PATH MUPLUGINS______: /home4/jjadeymy/public_html/.website_e2445dff/wp-content/mu-plugins
+PATH THEMES_________: /home4/jjadeymy/public_html/.website_e2445dff/wp-content/themes
+
+SUBSITES
+SUBSITE [ID:   1] "worknoon.com/"
+
+PLUGINS
+PLUGIN [SLUG:civi-framework/civi-framework.php                 ][ON:true ]  Civi Framework
+PLUGIN [SLUG:classic-editor/classic-editor.php                 ][ON:true ]  Classic Editor
+PLUGIN [SLUG:contact-form-7/wp-contact-form-7.php              ][ON:true ]  Contact Form 7
+PLUGIN [SLUG:duplicator/duplicator.php                         ][ON:true ]  Duplicator
+PLUGIN [SLUG:elementor/elementor.php                           ][ON:true ]  Elementor
+PLUGIN [SLUG:elementor-pro/elementor-pro.php                   ][ON:true ]  Elementor Pro
+PLUGIN [SLUG:litespeed-cache/litespeed-cache.php               ][ON:true ]  LiteSpeed Cache
+PLUGIN [SLUG:maintenance/maintenance.php                       ][ON:false]  Maintenance
+PLUGIN [SLUG:mailchimp-for-wp/mailchimp-for-wp.php             ][ON:true ]  MC4WP: Mailchimp for WordPress
+PLUGIN [SLUG:nextend-facebook-connect/nextend-facebook-connect.php][ON:true ]  Nextend Social Login
+PLUGIN [SLUG:wp-smushit/wp-smush.php                           ][ON:false]  Smush
+PLUGIN [SLUG:super-socializer/super_socializer.php             ][ON:false]  Super Socializer
+PLUGIN [SLUG:wordfence/wordfence.php                           ][ON:false]  Wordfence Security
+PLUGIN [SLUG:duplicate-post/duplicate-post.php                 ][ON:false]  Yoast Duplicate Post
+PLUGIN [SLUG:wordpress-seo/wp-seo.php                          ][ON:false]  Yoast SEO
+PLUGIN [SLUG:sso.php                                           ][ON:false]  SSO
+
+********************************************************************************
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/ctrls/ctrl.base.php:227][DELTA:   0.83411]  MESSAGE:END RENDER PAGE
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+STEP ACTION: "on-validate"
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/ctrls/ctrl.base.php:227][DELTA:   0.29668]  MESSAGE:END RENDER PAGE
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [validate] START
+START TEST "Archive Check" [CLASS: DUPX_Validation_test_archive_check]
+LOG-TIME[DELTA:   0.00010]  MESSAGE:TEST "Archive Check" RESULT: passed
+
+START TEST "Duplicator importer version" [CLASS: DUPX_Validation_test_importer_version]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Duplicator importer version" RESULT: skip
+
+START TEST "Overwrite Install" [CLASS: DUPX_Validation_test_owrinstall]
+LOG-TIME[DELTA:   0.00017]  MESSAGE:TEST "Overwrite Install" RESULT: skip
+
+START TEST "Recovery Point" [CLASS: DUPX_Validation_test_recovery]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "Recovery Point" RESULT: skip
+
+START TEST "Package is Importable" [CLASS: DUPX_Validation_test_importable]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "Package is Importable" RESULT: skip
+
+START TEST "REST API test" [CLASS: DUPX_Validation_test_rest_api]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "REST API test" RESULT: skip
+
+START TEST "Manual extraction detected" [CLASS: DUPX_Validation_test_manual_extraction]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "Manual extraction detected" RESULT: good
+
+START TEST "Database Only" [CLASS: DUPX_Validation_test_dbonly_iswordpress]
+LOG-TIME[DELTA:   0.00031]  MESSAGE:TEST "Database Only" RESULT: skip
+
+START TEST "Package Age" [CLASS: DUPX_Validation_test_package_age]
+LOG-TIME[DELTA:   0.00947]  MESSAGE:TEST "Package Age" RESULT: good
+
+START TEST "Package Size" [CLASS: DUPX_Validation_test_package_size]
+LOG-TIME[DELTA:   0.00013]  MESSAGE:TEST "Package Size" RESULT: good
+
+START TEST "Replace PATHs in database" [CLASS: DUPX_Validation_test_replace_paths]
+LOG-TIME[DELTA:   0.00064]  MESSAGE:TEST "Replace PATHs in database" RESULT: skip
+
+START TEST "Managed hosting supported" [CLASS: DUPX_Validation_test_managed_supported]
+LOG-TIME[DELTA:   0.00023]  MESSAGE:TEST "Managed hosting supported" RESULT: skip
+
+START TEST "Siteground" [CLASS: DUPX_Validation_test_siteground]
+LOG-TIME[DELTA:   0.00048]  MESSAGE:TEST "Siteground" RESULT: skip
+
+START TEST "Addon Sites" [CLASS: DUPX_Validation_test_addon_sites]
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+LOG-TIME[DELTA:   0.22564]  MESSAGE:TEST "Addon Sites" RESULT: good
+
+START TEST "Wordfence" [CLASS: DUPX_Validation_test_wordfence]
+LOG-TIME[DELTA:   0.00191]  MESSAGE:TEST "Wordfence" RESULT: good
+
+START TEST "Table prefix of managed hosting" [CLASS: DUPX_Validation_test_managed_tprefix]
+LOG-TIME[DELTA:   0.00050]  MESSAGE:TEST "Table prefix of managed hosting" RESULT: skip
+
+START TEST "PHP Version Mismatch" [CLASS: DUPX_Validation_test_php_version]
+LOG-TIME[DELTA:   0.00044]  MESSAGE:TEST "PHP Version Mismatch" RESULT: soft warning
+
+START TEST "PHP Open Base" [CLASS: DUPX_Validation_test_open_basedir]
+LOG-TIME[DELTA:   0.00018]  MESSAGE:TEST "PHP Open Base" RESULT: good
+
+START TEST "PHP Memory Limit" [CLASS: DUPX_Validation_test_memory_limit]
+LOG-TIME[DELTA:   0.00303]  MESSAGE:TEST "PHP Memory Limit" RESULT: good
+
+START TEST "PHP Extensions" [CLASS: DUPX_Validation_test_extensions]
+LOG-TIME[DELTA:   0.00012]  MESSAGE:TEST "PHP Extensions" RESULT: good
+
+START TEST "PHP Mysqli" [CLASS: DUPX_Validation_test_mysql_connect]
+LOG-TIME[DELTA:   0.00016]  MESSAGE:TEST "PHP Mysqli" RESULT: passed
+
+START TEST "PHP Tokenizer" [CLASS: DUPX_Validation_test_tokenizer]
+LOG-TIME[DELTA:   0.00019]  MESSAGE:TEST "PHP Tokenizer" RESULT: passed
+
+START TEST "PHP Timeout" [CLASS: DUPX_Validation_test_timeout]
+LOG-TIME[DELTA:   0.00008]  MESSAGE:TEST "PHP Timeout" RESULT: good
+
+START TEST "Disk Space" [CLASS: DUPX_Validation_test_disk_space]
+LOG-TIME[DELTA:   0.15765]  MESSAGE:TEST "Disk Space" RESULT: good
+
+START TEST "Permissions: General" [CLASS: DUPX_Validation_test_iswritable]
+LOG-TIME[DELTA:   0.24660]  MESSAGE:TEST "Permissions: General" RESULT: passed
+
+START TEST "Permissions: Configs Files " [CLASS: DUPX_Validation_test_iswritable_configs]
+LOG-TIME[DELTA:   0.00350]  MESSAGE:TEST "Permissions: Configs Files " RESULT: passed
+
+START TEST "Host Name" [CLASS: DUPX_Validation_test_db_host_name]
+LOG-TIME[DELTA:   0.00235]  MESSAGE:TEST "Host Name" RESULT: passed
+
+START TEST "Host Connection" [CLASS: DUPX_Validation_test_db_connection]
+LOG-TIME[DELTA:   0.00971]  MESSAGE:TEST "Host Connection" RESULT: passed
+
+START TEST "Database Version" [CLASS: DUPX_Validation_test_db_version]
+LOG-TIME[DELTA:   0.06781]  MESSAGE:TEST "Database Version" RESULT: soft warning
+
+START TEST "Create New Database" [CLASS: DUPX_Validation_test_db_create]
+LOG-TIME[DELTA:   0.00013]  MESSAGE:TEST "Create New Database" RESULT: skip
+
+START TEST "Database Engine Support" [CLASS: DUPX_Validation_test_db_supported_engine]
+LOG-TIME[DELTA:   0.00099]  MESSAGE:TEST "Database Engine Support" RESULT: passed
+
+START TEST "Database GTID Mode" [CLASS: DUPX_Validation_test_db_gtid_mode]
+LOG-TIME[DELTA:   0.00135]  MESSAGE:TEST "Database GTID Mode" RESULT: passed
+
+START TEST "Privileges: User Visibility" [CLASS: DUPX_Validation_test_db_visibility]
+LOG-TIME[DELTA:   0.00050]  MESSAGE:TEST "Privileges: User Visibility" RESULT: passed
+
+START TEST "Manual Table Check" [CLASS: DUPX_Validation_test_db_manual_tabels_count]
+LOG-TIME[DELTA:   0.00007]  MESSAGE:TEST "Manual Table Check" RESULT: skip
+
+START TEST "Multiple WordPress Installs" [CLASS: DUPX_Validation_test_db_multiple_wp_installs]
+LOG-TIME[DELTA:   0.00270]  MESSAGE:TEST "Multiple WordPress Installs" RESULT: passed
+
+START TEST "Privileges: User Resources" [CLASS: DUPX_Validation_test_db_user_resources]
+LOG-TIME[DELTA:   0.00084]  MESSAGE:TEST "Privileges: User Resources" RESULT: passed
+
+START TEST "Privileges: User Table Access" [CLASS: DUPX_Validation_test_db_user_perms]
+LOG-TIME[DELTA:   0.15280]  MESSAGE:TEST "Privileges: User Table Access" RESULT: passed
+
+START TEST "Privileges: 'Show Variables' Query" [CLASS: DUPX_Validation_test_db_custom_queries]
+LOG-TIME[DELTA:   0.01107]  MESSAGE:TEST "Privileges: 'Show Variables' Query" RESULT: passed
+
+START TEST "Source Database Triggers" [CLASS: DUPX_Validation_test_db_triggers]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Source Database Triggers" RESULT: passed
+
+START TEST "Character Set and Collation Support" [CLASS: DUPX_Validation_test_db_supported_default_charset]
+LOG-TIME[DELTA:   0.00204]  MESSAGE:TEST "Character Set and Collation Support" RESULT: passed
+
+START TEST "Character Set and  Collation Capability" [CLASS: DUPX_Validation_test_db_supported_charset]
+LOG-TIME[DELTA:   0.00036]  MESSAGE:TEST "Character Set and  Collation Capability" RESULT: passed
+
+START TEST "Tables Case Sensitivity" [CLASS: DUPX_Validation_test_db_case_sensitive_tables]
+LOG-TIME[DELTA:   0.00713]  MESSAGE:TEST "Tables Case Sensitivity" RESULT: passed
+
+START TEST "Tables Flagged for Removal or Backup" [CLASS: DUPX_Validation_test_db_affected_tables]
+LOG-TIME[DELTA:   0.00290]  MESSAGE:TEST "Tables Flagged for Removal or Backup" RESULT: passed
+
+START TEST "Prefix too long" [CLASS: DUPX_Validation_test_db_prefix_too_long]
+LOG-TIME[DELTA:   0.00074]  MESSAGE:TEST "Prefix too long" RESULT: passed
+
+START TEST "Database cleanup" [CLASS: DUPX_Validation_test_db_cleanup]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Database cleanup" RESULT: skip
+
+
+CTRL PARAMS AFTER VALIDATION
+AJAX ACTION [validate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [proceed_confirm_dialog] START
+AJAX ACTION [proceed_confirm_dialog] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+INITIALIZE FILTERS
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+********************************************************************************
+* DUPLICATOR LITE: Install-Log
+* STEP-1 START @ 04:30:07
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+INSTALL TYPE________: single site
+BLOG NAME___________: "Worknoon"
+HOME URL NEW________: "http://localhost/worknoon"
+SITE URL NEW________: "http://localhost/worknoon/"
+CONTENT URL NEW_____: "http://localhost/worknoon/wp-content"
+UPLOAD URL NEW______: "http://localhost/worknoon/wp-content/uploads"
+PLUGINS URL NEW_____: "http://localhost/worknoon/wp-content/plugins"
+MUPLUGINS URL NEW___: "http://localhost/worknoon/wp-content/mu-plugins"
+HOME PATH NEW_______: "/Applications/MAMP/htdocs/worknoon"
+SITE PATH NEW_______: "/Applications/MAMP/htdocs/worknoon/"
+CONTENT PATH NEW____: "/Applications/MAMP/htdocs/worknoon/wp-content"
+UPLOAD PATH NEW_____: "/Applications/MAMP/htdocs/worknoon/wp-content/uploads"
+PLUGINS PATH NEW____: "/Applications/MAMP/htdocs/worknoon/wp-content/plugins"
+MUPLUGINS PATH NEW__: "/Applications/MAMP/htdocs/worknoon/wp-content/mu-plugins"
+ARCHIVE ACTION______: "donothing"
+SKIP WP FILES_______: "none"
+ARCHIVE ENGINE______: "ziparchivechunking"
+SET DIR PERMS_______: true
+DIR PERMS VALUE_____: 0755
+SET FILE PERMS______: true
+FILE PERMS VALUE____: 0644
+SAFE MODE___________: 0
+LOGGING_____________: 1
+ZIP THROTTLING______: false
+WP CONFIG___________: "modify"
+HTACCESS CONFIG_____: "new"
+OTHER CONFIG________: "new"
+FILE TIME___________: "current"
+********************************************************************************
+
+REMOVE FILTERS
+	DIR : "/Applications/MAMP/htdocs/worknoon/dup-installer"
+	FILE: "/Applications/MAMP/htdocs/worknoon/Second_Backup_[HASH]_20230922140727_installer-backup.php"
+	FILE: "/Applications/MAMP/htdocs/worknoon/Second_Backup_[HASH]_20230922140727_archive.zip"
+	FILE: "/Applications/MAMP/htdocs/worknoon/installer.php"
+	FILE: "/Applications/MAMP/htdocs/worknoon/dup-installer-bootlog__025c5c9-22140727.txt"
+EXTRACTION FILTERS
+	DIR : "dup-installer"
+	FILE: "Second_Backup_[HASH]_20230922140727_installer-backup.php"
+--------------------------------------
+
+
+EXTRACTION: ZIP CHUNKING >>> START
+MAINTENANCE MODE ENABLE
+BEFORE EXTRACION ACTIONS
+
+*** RESET CONFIG FILES IN CURRENT HOSTING >>> START
+
+*** RESET CONFIG FILES IN CURRENT HOSTING >>> END
+MAINTENANCE MODE ENABLE
+
+*** CREATE FOLDER AND PERMISSION PREPARE
+FOLDER PREPARE DONE
+ARCHIVE OFFSET 0
+CHUNK COMPLETE - RUNTIME: 9.1563 sec. - Files processed: 2 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 2
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.3471 sec. - Files processed: 3 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 3
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.3685 sec. - Files processed: 4 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 4
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0331 sec. - Files processed: 1,550 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 1550
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0281 sec. - Files processed: 3,143 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 3143
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0303 sec. - Files processed: 3,826 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 3826
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0342 sec. - Files processed: 4,376 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 4376
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0328 sec. - Files processed: 4,959 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 4959
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0681 sec. - Files processed: 5,582 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 5582
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0297 sec. - Files processed: 6,112 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 6112
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0335 sec. - Files processed: 6,787 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 6787
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0308 sec. - Files processed: 7,172 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 7172
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0367 sec. - Files processed: 7,828 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 7828
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0381 sec. - Files processed: 8,253 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 8253
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0316 sec. - Files processed: 8,629 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 8629
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.5780 sec. - Files processed: 8,630 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 8630
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.1546 sec. - Files processed: 9,421 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 9421
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0171 sec. - Files processed: 12,480 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 12480
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0225 sec. - Files processed: 15,265 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 15265
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0178 sec. - Files processed: 18,521 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 18521
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0172 sec. - Files processed: 21,857 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 21857
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+FILE EXTRACTION: done processing last file in list of 22516
+
+EXTRACTION: ZIP CHUNKING >>> DONE
+
+EXTRACTION COMPLETE @ 04:32:02 - RUNTIME: 122.1446 sec. - Files processed: 21,909 of 21,909
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+ADD PREFIX META MAP ID 0 g2t_
+
+
+
+********************************************************************************
+* DUPLICATOR LITE: INSTALL-LOG
+* STEP-2 START @ 04:32:02
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+DB ENGINE___________: "chunk"
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+USER MODE___________: "overwrite"
+TABLE PREFIX________: "g2t_"
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: ""
+CUNKING_____________: true
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+FUNCTIONS___________: true
+REMOVE DEFINER______: false
+SPLIT CREATES_______: true
+--------------------------------------
+TABLES
+--------------------------------------
+TABLE "g2t_actionscheduler_actions"_____________________[ROWS:       4] [EXTRACT|REPLACE] [INST NAME: g2t_actionscheduler_actions]
+TABLE "g2t_actionscheduler_claims"______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_actionscheduler_claims]
+TABLE "g2t_actionscheduler_groups"______________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: g2t_actionscheduler_groups]
+TABLE "g2t_actionscheduler_logs"________________________[ROWS:      12] [EXTRACT|REPLACE] [INST NAME: g2t_actionscheduler_logs]
+TABLE "g2t_commentmeta"_________________________________[ROWS:     212] [EXTRACT|REPLACE] [INST NAME: g2t_commentmeta]
+TABLE "g2t_comments"____________________________________[ROWS:      32] [EXTRACT|REPLACE] [INST NAME: g2t_comments]
+TABLE "g2t_duplicator_packages"_________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: g2t_duplicator_packages]
+TABLE "g2t_e_events"____________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_e_events]
+TABLE "g2t_e_submissions"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_e_submissions]
+TABLE "g2t_e_submissions_actions_log"___________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_e_submissions_actions_log]
+TABLE "g2t_e_submissions_values"________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_e_submissions_values]
+TABLE "g2t_links"_______________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_links]
+TABLE "g2t_litespeed_url"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_litespeed_url]
+TABLE "g2t_litespeed_url_file"__________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_litespeed_url_file]
+TABLE "g2t_options"_____________________________________[ROWS:    1118] [EXTRACT|REPLACE] [INST NAME: g2t_options]
+TABLE "g2t_postmeta"____________________________________[ROWS:   14521] [EXTRACT|REPLACE] [INST NAME: g2t_postmeta]
+TABLE "g2t_posts"_______________________________________[ROWS:    1822] [EXTRACT|REPLACE] [INST NAME: g2t_posts]
+TABLE "g2t_rank_math_internal_links"____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_rank_math_internal_links]
+TABLE "g2t_rank_math_internal_meta"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_rank_math_internal_meta]
+TABLE "g2t_smush_dir_images"____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_smush_dir_images]
+TABLE "g2t_social_users"________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_social_users]
+TABLE "g2t_termmeta"____________________________________[ROWS:     142] [EXTRACT|REPLACE] [INST NAME: g2t_termmeta]
+TABLE "g2t_terms"_______________________________________[ROWS:     330] [EXTRACT|REPLACE] [INST NAME: g2t_terms]
+TABLE "g2t_term_relationships"__________________________[ROWS:     788] [EXTRACT|REPLACE] [INST NAME: g2t_term_relationships]
+TABLE "g2t_term_taxonomy"_______________________________[ROWS:     330] [EXTRACT|REPLACE] [INST NAME: g2t_term_taxonomy]
+TABLE "g2t_usermeta"____________________________________[ROWS:     447] [EXTRACT|REPLACE] [INST NAME: g2t_usermeta]
+TABLE "g2t_users"_______________________________________[ROWS:      23] [EXTRACT|REPLACE] [INST NAME: g2t_users]
+TABLE "g2t_wfblockediplog"______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfblockediplog]
+TABLE "g2t_wfblocks7"___________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfblocks7]
+TABLE "g2t_wfconfig"____________________________________[ROWS:     263] [EXTRACT|REPLACE] [INST NAME: g2t_wfconfig]
+TABLE "g2t_wfcrawlers"__________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfcrawlers]
+TABLE "g2t_wffilechanges"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wffilechanges]
+TABLE "g2t_wffilemods"__________________________________[ROWS:   14495] [EXTRACT|REPLACE] [INST NAME: g2t_wffilemods]
+TABLE "g2t_wfhits"______________________________________[ROWS:      68] [EXTRACT|REPLACE] [INST NAME: g2t_wfhits]
+TABLE "g2t_wfhoover"____________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfhoover]
+TABLE "g2t_wfissues"____________________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: g2t_wfissues]
+TABLE "g2t_wfknownfilelist"_____________________________[ROWS:   14495] [EXTRACT|REPLACE] [INST NAME: g2t_wfknownfilelist]
+TABLE "g2t_wflivetraffichuman"__________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wflivetraffichuman]
+TABLE "g2t_wflocs"______________________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: g2t_wflocs]
+TABLE "g2t_wflogins"____________________________________[ROWS:      72] [EXTRACT|REPLACE] [INST NAME: g2t_wflogins]
+TABLE "g2t_wfls_2fa_secrets"____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfls_2fa_secrets]
+TABLE "g2t_wfls_role_counts"____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfls_role_counts]
+TABLE "g2t_wfls_settings"_______________________________[ROWS:      27] [EXTRACT|REPLACE] [INST NAME: g2t_wfls_settings]
+TABLE "g2t_wfnotifications"_____________________________[ROWS:       7] [EXTRACT|REPLACE] [INST NAME: g2t_wfnotifications]
+TABLE "g2t_wfpendingissues"_____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfpendingissues]
+TABLE "g2t_wfreversecache"______________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: g2t_wfreversecache]
+TABLE "g2t_wfsecurityevents"____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfsecurityevents]
+TABLE "g2t_wfsnipcache"_________________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: g2t_wfsnipcache]
+TABLE "g2t_wfstatus"____________________________________[ROWS:    1395] [EXTRACT|REPLACE] [INST NAME: g2t_wfstatus]
+TABLE "g2t_wftrafficrates"______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wftrafficrates]
+TABLE "g2t_wfwaffailures"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: g2t_wfwaffailures]
+TABLE "g2t_wpas_index"__________________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: g2t_wpas_index]
+TABLE "g2t_yoast_indexable"_____________________________[ROWS:     643] [EXTRACT|REPLACE] [INST NAME: g2t_yoast_indexable]
+TABLE "g2t_yoast_indexable_hierarchy"___________________[ROWS:     583] [EXTRACT|REPLACE] [INST NAME: g2t_yoast_indexable_hierarchy]
+TABLE "g2t_yoast_migrations"____________________________[ROWS:      24] [EXTRACT|REPLACE] [INST NAME: g2t_yoast_migrations]
+TABLE "g2t_yoast_primary_term"__________________________[ROWS:     305] [EXTRACT|REPLACE] [INST NAME: g2t_yoast_primary_term]
+TABLE "g2t_yoast_seo_links"_____________________________[ROWS:    1899] [EXTRACT|REPLACE] [INST NAME: g2t_yoast_seo_links]
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.39 -- Build Server: 5.7.23
+FILE SIZE:	dup-database__[HASH].sql (34.46MB)
+TIMEOUT:	5000
+MAXPACK:	4194304
+SQLMODE-GLOBAL:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+SQLMODE-SESSION:NO_AUTO_VALUE_ON_ZERO
+DROP ALL TABLES
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+QUERY FIXES
+GLOBAL RULES ADDED: PROC AND VIEWS
+
+QUERY FIXES GLOBAL RULES
+	SEARCH  => /^(\s*(?:\/\*!\d+\s)?\s*(?:CREATE.+)?DEFINER\s*=)([^\*\s]+)(.*)$/m
+	REPLACE => $1`worknoon`@`localhost`$3
+
+	SEARCH  => /^(\s*CREATE.+(?:PROCEDURE|FUNCTION)[\s\S]*)(BEGIN)([\s\S]*)$/
+	REPLACE => $1SQL SECURITY INVOKER
+$2$3
+
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 0
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	544
+
+TABLES ROWS IN DATABASE AFTER EXTRACTION
+
+TABLE "g2t_actionscheduler_actions"_____________________[ROWS:     4]
+TABLE "g2t_actionscheduler_claims"______________________[ROWS:     0]
+TABLE "g2t_actionscheduler_groups"______________________[ROWS:     1]
+TABLE "g2t_actionscheduler_logs"________________________[ROWS:    12]
+TABLE "g2t_commentmeta"_________________________________[ROWS:   212]
+TABLE "g2t_comments"____________________________________[ROWS:    32]
+TABLE "g2t_duplicator_packages"_________________________[ROWS:     2]
+TABLE "g2t_e_events"____________________________________[ROWS:     0]
+TABLE "g2t_e_submissions"_______________________________[ROWS:     0]
+TABLE "g2t_e_submissions_actions_log"___________________[ROWS:     0]
+TABLE "g2t_e_submissions_values"________________________[ROWS:     0]
+TABLE "g2t_links"_______________________________________[ROWS:     0]
+TABLE "g2t_litespeed_url"_______________________________[ROWS:     0]
+TABLE "g2t_litespeed_url_file"__________________________[ROWS:     0]
+TABLE "g2t_options"_____________________________________[ROWS:  1118]
+TABLE "g2t_postmeta"____________________________________[ROWS: 14521]
+TABLE "g2t_posts"_______________________________________[ROWS:  1822]
+TABLE "g2t_rank_math_internal_links"____________________[ROWS:     0]
+TABLE "g2t_rank_math_internal_meta"_____________________[ROWS:     0]
+TABLE "g2t_smush_dir_images"____________________________[ROWS:     0]
+TABLE "g2t_social_users"________________________________[ROWS:     0]
+TABLE "g2t_term_relationships"__________________________[ROWS:   788]
+TABLE "g2t_term_taxonomy"_______________________________[ROWS:   330]
+TABLE "g2t_termmeta"____________________________________[ROWS:   142]
+TABLE "g2t_terms"_______________________________________[ROWS:   330]
+TABLE "g2t_usermeta"____________________________________[ROWS:   447]
+TABLE "g2t_users"_______________________________________[ROWS:    23]
+TABLE "g2t_wfblockediplog"______________________________[ROWS:     0]
+TABLE "g2t_wfblocks7"___________________________________[ROWS:     0]
+TABLE "g2t_wfconfig"____________________________________[ROWS:   263]
+TABLE "g2t_wfcrawlers"__________________________________[ROWS:     0]
+TABLE "g2t_wffilechanges"_______________________________[ROWS:     0]
+TABLE "g2t_wffilemods"__________________________________[ROWS: 14495]
+TABLE "g2t_wfhits"______________________________________[ROWS:    68]
+TABLE "g2t_wfhoover"____________________________________[ROWS:     0]
+TABLE "g2t_wfissues"____________________________________[ROWS:     2]
+TABLE "g2t_wfknownfilelist"_____________________________[ROWS: 14495]
+TABLE "g2t_wflivetraffichuman"__________________________[ROWS:     0]
+TABLE "g2t_wflocs"______________________________________[ROWS:     2]
+TABLE "g2t_wflogins"____________________________________[ROWS:    72]
+TABLE "g2t_wfls_2fa_secrets"____________________________[ROWS:     0]
+TABLE "g2t_wfls_role_counts"____________________________[ROWS:     0]
+TABLE "g2t_wfls_settings"_______________________________[ROWS:    27]
+TABLE "g2t_wfnotifications"_____________________________[ROWS:     7]
+TABLE "g2t_wfpendingissues"_____________________________[ROWS:     0]
+TABLE "g2t_wfreversecache"______________________________[ROWS:     2]
+TABLE "g2t_wfsecurityevents"____________________________[ROWS:     0]
+TABLE "g2t_wfsnipcache"_________________________________[ROWS:     2]
+TABLE "g2t_wfstatus"____________________________________[ROWS:  1395]
+TABLE "g2t_wftrafficrates"______________________________[ROWS:     0]
+TABLE "g2t_wfwaffailures"_______________________________[ROWS:     0]
+TABLE "g2t_wpas_index"__________________________________[ROWS:     1]
+TABLE "g2t_yoast_indexable"_____________________________[ROWS:   643]
+TABLE "g2t_yoast_indexable_hierarchy"___________________[ROWS:   583]
+TABLE "g2t_yoast_migrations"____________________________[ROWS:    24]
+TABLE "g2t_yoast_primary_term"__________________________[ROWS:   305]
+TABLE "g2t_yoast_seo_links"_____________________________[ROWS:  1899]
+
+INSERT DATA RUNTIME: 4.4305 sec.
+STEP-2 COMPLETE @ 04:32:07 - RUNTIME: 4.4306 sec.
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+
+====================================
+SET SEARCH AND REPLACE LIST INSTALL TYPE single site
+====================================
+SEARCH ITEM[T:path |P:12] SEARCH: /home4/jjadeymy/public_html/.website_e2445dff REPLACE: /Applications/MAMP/htdocs/worknoon/ [SCOPE: ALL]
+SEARCH ITEM[T:path |P:12] SEARCH: /home4/jjadeymy/public_html/.website_e2445dff REPLACE: /Applications/MAMP/htdocs/worknoon [SCOPE: ALL]
+SEARCH ITEM[T:urlnd|P:12] SEARCH: https://worknoon.com REPLACE: http://localhost/worknoon/ [SCOPE: ALL]
+SEARCH ITEM[T:urlnd|P:12] SEARCH: https://worknoon.com REPLACE: http://localhost/worknoon [SCOPE: ALL]
+CHUNK LOAD DATA: IS NULL 
+CHUNK ACTION: CURRENT [start][][]
+
+
+********************************************************************************
+DUPLICATOR LITE: INSTALL-LOG
+STEP-3 START @ 04:32:07
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+SKIP PATH REPLACE_____: false
+DISALLOW_FILE_EDIT____: [value = ], [inWpConfig = ]
+DISALLOW_FILE_MODS____: [value = ], [inWpConfig = ]
+AUTOSAVE_INTERVAL_____: [value = 300], [inWpConfig = 1]
+WP_POST_REVISIONS_____: [value = 20], [inWpConfig = 1]
+FORCE_SSL_ADMIN_______: [value = 1], [inWpConfig = ]
+WP_AUTO_UPDATE_CORE___: [value = true], [inWpConfig = 1]
+WP_CACHE______________: [value = 1], [inWpConfig = 1]
+WPCACHEHOME___________: [value = /], [inWpConfig = ]
+WP_DEBUG______________: [value = ], [inWpConfig = 1]
+WP_DEBUG_LOG__________: [value = ], [inWpConfig = ]
+WP_DEBUG_DISPLAY______: [value = 1], [inWpConfig = ]
+WP_DISABLE_FATAL_ERROR_HANDLER: [value = ], [inWpConfig = ]
+SCRIPT_DEBUG__________: [value = ], [inWpConfig = ]
+CONCATENATE_SCRIPTS___: [value = ], [inWpConfig = ]
+SAVEQUERIES___________: [value = ], [inWpConfig = ]
+ALTERNATE_WP_CRON_____: [value = ], [inWpConfig = ]
+DISABLE_WP_CRON_______: [value = ], [inWpConfig = ]
+WP_CRON_LOCK_TIMEOUT__: [value = 120], [inWpConfig = 1]
+COOKIE_DOMAIN_________: [value = ], [inWpConfig = ]
+WP_MEMORY_LIMIT_______: [value = 40M], [inWpConfig = ]
+WP_MAX_MEMORY_LIMIT___: [value = 512M], [inWpConfig = ]
+WP_TEMP_DIR___________: [value = ], [inWpConfig = ]
+********************************************************************************
+
+********************************************************************************
+CHUNK PARAMS:
+maxIteration__________: 0
+timeOut_______________: 5000
+throttling____________: 2
+rowsPerPage___________: 1000
+********************************************************************************
+
+CHUNK ACTION: CURRENT [cleanup_trans][][]
+CLEAN OPTIONS [g2t_options]
+	`option_name` LIKE "\_transient%"
+	`option_name` LIKE "\_site\_transient%"
+	`option_name` IN ("duplicator_ui_view_state","duplicator_package_active","duplicator_settings","duplicator_is_pro_enable_notice_dismissed")
+DATABASE OPTIONS DELETED [ROWS:    38]
+CHUNK ACTION: CURRENT [cleanup_extra][][]
+CLEANUP EXTRA
+	- SKIP DROP VIEWS
+	- SKIP DROP PROCS
+	- SKIP DROP FUNCS
+CHUNK ACTION: CURRENT [cleanup_packages][][]
+EMPTY PACKAGES TABLE
+CLEAN PACKAGES
+DATABASE PACKAGE DELETED [ROWS:     2]
+CHUNK ACTION: CURRENT [init][][]
+
+EVALUATE TABLE: "g2t_actionscheduler_actions"_____________________[ROWS:     4][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_actionscheduler_actions][0]
+
+EVALUATE TABLE: "g2t_actionscheduler_claims"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_actionscheduler_groups"______________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_actionscheduler_groups][0]
+
+EVALUATE TABLE: "g2t_actionscheduler_logs"________________________[ROWS:    12][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_actionscheduler_logs][0]
+
+EVALUATE TABLE: "g2t_commentmeta"_________________________________[ROWS:   212][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_commentmeta][0]
+
+EVALUATE TABLE: "g2t_comments"____________________________________[ROWS:    32][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_comments][0]
+
+EVALUATE TABLE: "g2t_duplicator_packages"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_e_events"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_e_submissions"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_e_submissions_actions_log"___________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_e_submissions_values"________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_links"_______________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_litespeed_url"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_litespeed_url_file"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_options"_____________________________________[ROWS:  1080][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_options][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_options][1]
+
+EVALUATE TABLE: "g2t_postmeta"____________________________________[ROWS: 14521][PG:  15][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][1]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][2]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][3]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][4]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][5]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][6]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][7]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][8]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][9]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][10]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][11]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][12]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][13]
+	CHUNK ACTION: CURRENT [search_replace][g2t_postmeta][14]
+
+EVALUATE TABLE: "g2t_posts"_______________________________________[ROWS:  1822][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_posts][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_posts][1]
+
+EVALUATE TABLE: "g2t_rank_math_internal_links"____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_rank_math_internal_meta"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_smush_dir_images"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_social_users"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_termmeta"____________________________________[ROWS:   142][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_termmeta][0]
+
+EVALUATE TABLE: "g2t_terms"_______________________________________[ROWS:   330][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_terms][0]
+
+EVALUATE TABLE: "g2t_term_relationships"__________________________[ROWS:   788][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_term_taxonomy"_______________________________[ROWS:   330][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_term_taxonomy][0]
+
+EVALUATE TABLE: "g2t_usermeta"____________________________________[ROWS:   447][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_usermeta][0]
+
+EVALUATE TABLE: "g2t_users"_______________________________________[ROWS:    23][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_users][0]
+
+EVALUATE TABLE: "g2t_wfblockediplog"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfblocks7"___________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfconfig"____________________________________[ROWS:   263][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfconfig][0]
+
+EVALUATE TABLE: "g2t_wfcrawlers"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wffilechanges"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wffilemods"__________________________________[ROWS: 14495][PG:  15][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][1]
+	
+STEP-3 CHUNK STOP @ 04:32:13 - RUNTIME: 6.2363 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][2]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][3]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][4]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][5]
+
+STEP-3 CHUNK STOP @ 04:32:19 - RUNTIME: 6.1157 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][6]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][7]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][8]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][9]
+
+STEP-3 CHUNK STOP @ 04:32:25 - RUNTIME: 5.9856 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][10]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][11]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][12]
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][13]
+
+STEP-3 CHUNK STOP @ 04:32:32 - RUNTIME: 6.2041 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wffilemods][14]
+
+EVALUATE TABLE: "g2t_wfhits"______________________________________[ROWS:    68][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfhits][0]
+
+EVALUATE TABLE: "g2t_wfhoover"____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfissues"____________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfissues][0]
+
+EVALUATE TABLE: "g2t_wfknownfilelist"_____________________________[ROWS: 14495][PG:  15][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][1]
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][2]
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][3]
+	
+STEP-3 CHUNK STOP @ 04:32:38 - RUNTIME: 6.1199 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][4]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][5]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][6]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][7]
+
+STEP-3 CHUNK STOP @ 04:32:44 - RUNTIME: 5.9612 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][8]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][9]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][10]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][11]
+
+STEP-3 CHUNK STOP @ 04:32:49 - RUNTIME: 5.2265 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][12]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][13]
+CHUNK ACTION: CURRENT [search_replace][g2t_wfknownfilelist][14]
+
+EVALUATE TABLE: "g2t_wflivetraffichuman"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wflocs"______________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wflocs][0]
+
+EVALUATE TABLE: "g2t_wflogins"____________________________________[ROWS:    72][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wflogins][0]
+
+EVALUATE TABLE: "g2t_wfls_2fa_secrets"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfls_role_counts"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfls_settings"_______________________________[ROWS:    27][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfls_settings][0]
+
+EVALUATE TABLE: "g2t_wfnotifications"_____________________________[ROWS:     7][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfnotifications][0]
+
+EVALUATE TABLE: "g2t_wfpendingissues"_____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfreversecache"______________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfreversecache][0]
+
+EVALUATE TABLE: "g2t_wfsecurityevents"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfsnipcache"_________________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfsnipcache][0]
+
+EVALUATE TABLE: "g2t_wfstatus"____________________________________[ROWS:  1395][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfstatus][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_wfstatus][1]
+
+EVALUATE TABLE: "g2t_wftrafficrates"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wfwaffailures"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_wpas_index"__________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_wpas_index][0]
+
+EVALUATE TABLE: "g2t_yoast_indexable"_____________________________[ROWS:   643][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_yoast_indexable][0]
+
+EVALUATE TABLE: "g2t_yoast_indexable_hierarchy"___________________[ROWS:   583][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "g2t_yoast_migrations"____________________________[ROWS:    24][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_yoast_migrations][0]
+
+EVALUATE TABLE: "g2t_yoast_primary_term"__________________________[ROWS:   305][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_yoast_primary_term][0]
+
+EVALUATE TABLE: "g2t_yoast_seo_links"_____________________________[ROWS:  1899][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/home4/jjadeymy/public_html/.website_e2445dff" ===> "/Applications/MAMP/htdocs/worknoon"
+	SEARCH[urlnd]  2:"https://worknoon.com" ============================> "http://localhost/worknoon"
+	CHUNK ACTION: CURRENT [search_replace][g2t_yoast_seo_links][0]
+	CHUNK ACTION: CURRENT [search_replace][g2t_yoast_seo_links][1]
+--------------------------------------
+SCANNED:	Tables:57 	|	 Rows:52658 	|	 Cells:368750 
+UPDATED:	Tables:6 	|	 Rows:29598 	|	 Cells:29668 
+ERRORS:		0 
+RUNTIME:	45.727600 sec
+CHUNK ACTION: CURRENT [rem_maintenance][][]
+
+====================================
+REMOVE MAINTENANCE MODE
+====================================
+MAINTENANCE MODE DISABLE
+CHUNK ACTION: CURRENT [config_update][][]
+SET CONFIG FILES
+Retained original entry wpconfig target:/Applications/MAMP/htdocs/worknoon/wp-config.php
+New htaccess file created:/Applications/MAMP/htdocs/worknoon/.htaccess
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE ABSPATH "dirname(__FILE__) . '/'"
+	UPDATE WP_SITEURL "http://localhost/worknoon/"
+	UPDATE DB_NAME ""worknoon""
+	UPDATE DB_USER "** OBSCURED **"
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	UPDATE DB_CHARSET "utf8"
+	UPDATE DB_COLLATE ""
+	WP CONFIG UPDATE WP_CACHE "true"
+	WP CONFIG UPDATE AUTOSAVE_INTERVAL "300"
+	WP CONFIG UPDATE WP_POST_REVISIONS "20"
+	WP CONFIG UPDATE WP_DEBUG "false"
+	WP CONFIG UPDATE WP_CRON_LOCK_TIMEOUT "120"
+	WP CONFIG UPDATE EMPTY_TRASH_DAYS "7"
+	WP CONFIG UPDATE WP_AUTO_UPDATE_CORE "true"
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE
+====================================
+
+WEB SERVER CONFIGURATION FILE UPDATED:
+- Preparing .htaccess file with basic setup.
+HTACCESS FILE - Successfully updated the .htaccess file setting.
+
+====================================
+INDEX.PHP UPDATE
+====================================
+INDEX.PHP updated with new blog header "dirname(__FILE__) . '/wp-blog-header.php'"
+
+CHUNK ACTION: CURRENT [gen_update][][]
+
+====================================
+GENERAL UPDATES
+====================================
+
+====================================
+MANAGE PLUGINS
+====================================
+CHUNK ACTION: CURRENT [gen_clean][][]
+
+====================================
+GENERAL CLEANUP
+====================================
+RESET ALL USERS SESSION TOKENS
+MIGRATION INFO SET
+CHUNK ACTION: CURRENT [create_admin][][]
+
+====================================
+RESET USERS PASSWORD
+====================================
+CHUNK ACTION: CURRENT [notice_test][][]
+
+====================================
+CHECK FOR INDEX.HTML
+====================================
+NO INDEX.HTML WAS FOUND
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+CHUNK ACTION: CURRENT [cleanup_tmp_files][][]
+
+====================================
+CLEANUP TMP FILES
+====================================
+CHUNK ACTION: CURRENT [set_files_perms][][]
+
+====================================
+SET PARAMS PERMISSION
+====================================
+
+*** SET FOLDER PERMISSION AFTER EXTRACTION
+--------------------------------------
+PATHS MAPPING : "/Applications/MAMP/htdocs/worknoon"
+--------------------------------------
+SET FOLDER PERMISSION DONE
+CHUNK ACTION: CURRENT [final_report][][]
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 04:32:53 - RUNTIME: 4.0534 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [finalpre] START
+AJAX ACTION [finalpre] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+-------------------------
+AJAX ACTION [finalafter] START
+AJAX ACTION [finalafter] SUCCESS
+-------------------------
+
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/src/Core/Bootstrap.php:71] RESET TIME
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+====================================
+LOG-TIME[/Applications/MAMP/htdocs/worknoon/dup-installer/ctrls/ctrl.base.php:227][DELTA:   0.17012]  MESSAGE:END RENDER PAGE

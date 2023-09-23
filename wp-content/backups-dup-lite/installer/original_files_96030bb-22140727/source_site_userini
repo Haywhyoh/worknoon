@@ -1,0 +1,3 @@
+; Wordfence WAF
+auto_prepend_file = '/home4/jjadeymy/public_html/.website_e2445dff/wordfence-waf.php'
+; END Wordfence WAF

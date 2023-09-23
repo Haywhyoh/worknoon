@@ -1,0 +1,243 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+global $current_user;
+$current_user = wp_get_current_user();
+$user_id = $current_user->ID;
+$candidate_paid_submission_type = civi_get_option('candidate_paid_submission_type');
+if ($candidate_paid_submission_type !== 'candidate_per_package') {
+    echo civi_get_template_html('global/access-denied.php', array('type' => 'free_submit'));
+    return;
+}
+
+?>
+<div class="civi-package-wrap">
+    <div class="civi-heading">
+        <h2 class="entry-title"><?php esc_html_e('Create a package candidate', 'civi-framework') ?></h2>
+        <div class="choose-package">
+            <h4><?php esc_html_e('Choose Package', 'civi-framework') ?></h4>
+            <p><?php esc_html_e('Select a candidate package from above and submit candidate', 'civi-framework') ?></p>
+        </div>
+    </div>
+    <div class="row">
+        <?php
+        $user_candidate_package_id = get_the_author_meta(CIVI_METABOX_PREFIX . 'candidate_package_id', $user_id);
+        $args = array(
+            'post_type' => 'candidate_package',
+            'posts_per_page' => -1,
+            'orderby' => 'meta_value',
+            'meta_key' => CIVI_METABOX_PREFIX . 'candidate_package_order_display',
+            'order' => 'ASC',
+            'meta_query' => array(
+                array(
+                    'key' => CIVI_METABOX_PREFIX . 'candidate_package_visible',
+                    'value' => '1',
+                    'compare' => '=',
+                )
+            )
+        );
+        $data = new WP_Query($args);
+        $total_records = $data->found_posts;
+        if ($total_records == 4) {
+            $css_class = 'col-md-4 col-sm-6';
+        } else if ($total_records == 3) {
+            $css_class = 'col-md-4 col-sm-6';
+        } else if ($total_records == 2) {
+            $css_class = 'col-md-4 col-sm-6';
+        } else if ($total_records == 1) {
+            $css_class = 'col-md-4 col-sm-12';
+        } else {
+            $css_class = 'col-md-3 col-sm-6';
+        }
+        while ($data->have_posts()) : $data->the_post();
+            $candidate_package_id = get_the_ID();
+            $candidate_package_time_unit = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_time_unit', true);
+            $candidate_package_period = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_period', true);
+            $candidate_package_number_service = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_number_service', true);
+            $candidate_package_free = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_free', true);
+            if ($candidate_package_free == 1) {
+                $candidate_package_price = 0;
+            } else {
+                $candidate_package_price = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_price', true);
+            }
+            $enable_package_service_unlimited = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'enable_package_service_unlimited', true);
+            $enable_package_service_unlimited_time = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'enable_package_service_unlimited_time', true);
+            $candidate_package_featured_candidate = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'enable_package_service_featured_unlimited', true);
+            $candidate_package_number_service_featured = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_number_service_featured', true);
+            $candidate_package_featured = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_featured', true);
+            $candidate_package_additional = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_additional_details', true);
+            if ($candidate_package_additional > 0) {
+                $candidate_package_additional_text = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_details_text', true);
+            }
+
+            if ($candidate_package_period > 1) {
+                $candidate_package_time_unit .= 's';
+            }
+            if ($candidate_package_featured == 1) {
+                $is_featured = ' active';
+            } else {
+                $is_featured = '';
+            }
+            $civi_candidate_package = new civi_candidate_package();
+            $get_expired_date = $civi_candidate_package->get_expired_date($candidate_package_id, $user_id);
+            $current_date = date('Y-m-d');
+
+            $d1 = strtotime($get_expired_date);
+            $d2 = strtotime($current_date);
+
+            if ($get_expired_date === 'never expires') {
+                $d1 = 999999999999999999999999;
+            }
+
+            if ($user_candidate_package_id == $candidate_package_id && $d1 > $d2) {
+                $is_current = 'current';
+            } else {
+                $is_current = '';
+            }
+            $payment_link = civi_get_permalink('candidate_payment');
+            $payment_process_link = add_query_arg('candidate_package_id', $candidate_package_id, $payment_link);
+            $field_package = array('jobs_apply', 'jobs_wishlist', 'company_follow', 'contact_company', 'info_company', 'send_message', 'review_and_commnent');
+            ?>
+            <div class="<?php echo esc_attr($css_class); ?>">
+                <div class="civi-package-item panel panel-default <?php echo esc_attr($is_current); ?> <?php echo esc_attr($is_featured); ?>">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class="civi-package-thumbnail"><?php the_post_thumbnail(); ?></div>
+                    <?php endif; ?>
+                    <div class="civi-package-title">
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
+                        <?php if ($candidate_package_featured == 1) { ?>
+                            <span class="recommended"><?php esc_html_e('Recommended', 'civi-framework'); ?></span>
+                        <?php } ?>
+                    </div>
+                    <div class="civi-package-price">
+                        <?php
+                        if ($candidate_package_price > 0) {
+                            echo civi_get_format_money($candidate_package_price, '', 2, true);
+                        } else {
+                            esc_html_e('Free', 'civi-framework');
+                        }
+                        ?>
+                    </div>
+                    <ul class="list-group custom-scrollbar">
+                        <li class="list-group-item">
+                            <i class="fas fa-check"></i>
+                            <?php esc_html_e('Package live for', 'civi-framework'); ?>
+                            <span class="badge">
+                                <?php if ($enable_package_service_unlimited_time == 1) {
+                                    esc_html_e('never expires', 'civi-framework');
+                                } else {
+                                    esc_html_e($candidate_package_period . ' ' . Civi_Candidate_Package::get_time_unit($candidate_package_time_unit));
+                                }
+                                ?>
+                            </span>
+                        </li>
+                        <?php if (civi_get_option('enable_post_type_service') === '1') {?>
+                            <?php if(!empty($candidate_package_number_service)) : ?>
+                                <li class="list-group-item">
+                                <i class="fas fa-check"></i>
+                                <span class="badge">
+                                    <?php if ($enable_package_service_unlimited == 1) {
+                                        esc_html_e('Unlimited', 'civi-framework');
+                                    } else {
+                                        esc_html_e($candidate_package_number_service);
+                                    } ?>
+                                </span>
+                                <?php esc_html_e('service posting', 'civi-framework'); ?>
+                            </li>
+                            <?php endif; ?>
+                            <?php if(!empty($candidate_package_number_service_featured)) : ?>
+                            <li class="list-group-item">
+                                <i class="fas fa-check"></i>
+                                <span class="badge">
+                                    <?php if ($candidate_package_featured_candidate == 1) {
+                                        esc_html_e('Unlimited', 'civi-framework');
+                                    } else {
+                                        esc_html_e($candidate_package_number_service_featured);
+                                    } ?>
+                                </span>
+                                <?php esc_html_e('featured service', 'civi-framework') ?>
+                            </li>
+                            <?php endif; ?>
+                        <?php } ?>
+                        <?php foreach ($field_package as $field) :
+                            $show_field = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'show_package_' . $field, true);
+                            $field_number = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'candidate_package_number_' . $field, true);
+                            $field_unlimited = get_post_meta($candidate_package_id, CIVI_METABOX_PREFIX . 'enable_package_' . $field . '_unlimited', true);
+                            $is_check = false;
+                            switch ($field) {
+                                case 'jobs_apply':
+                                    $name = esc_html__('jobs applied', 'civi-framework');
+                                    break;
+                                case 'jobs_wishlist':
+                                    $name = esc_html__('jobs wishlist', 'civi-framework');
+                                    break;
+                                case 'company_follow':
+                                    $name = esc_html__('company follow', 'civi-framework');
+                                    break;
+                                case 'contact_company':
+                                    $name = esc_html__('View company in jobs', 'civi-framework');
+                                    $is_check = true;
+                                    break;
+                                case 'info_company':
+                                    $name = esc_html__('View information company', 'civi-framework');
+                                    $is_check = true;
+                                    break;
+                                case 'send_message':
+                                    $name = esc_html__('Send message', 'civi-framework');
+                                    $is_check = true;
+                                    break;
+                                case 'review_and_commnent':
+                                    $name = esc_html__('Review and commnet', 'civi-framework');
+                                    $is_check = true;
+                                    break;
+
+                            }
+                            if (intval($show_field) == 1 && !empty($field_number)) : ?>
+                                <li class="list-group-item"">
+                                    <i class="fas fa-check"></i>
+                                    <?php if ($is_check == true) { ?>
+                                        <span class="badge">
+                                            <?php esc_html_e($name); ?>
+                                        </span>
+                                    <?php } else { ?>
+                                    <span class="badge">
+                                         <?php if ($field_unlimited == 1) { ?>
+                                             <?php esc_html_e('Unlimited', 'civi-framework'); ?>
+                                         <?php } else { ?>
+                                             <?php echo $field_number; ?>
+                                         <?php } ?>
+                                        </span>
+                                    <?php echo $name; ?>
+                                    <?php } ?>
+                                </li>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+
+                        <?php if ($candidate_package_additional > 0) {
+                            foreach ($candidate_package_additional_text as $value) { ?>
+                                <?php if(!empty($value)) : ?>
+                                    <li class="list-group-item">
+                                        <i class="fas fa-check"></i>
+                                        <span class="badge">
+                                            <?php esc_html_e($value); ?>
+                                        </span>
+                                    </li>
+                                <?php endif;?>
+                            <?php }
+                        } ?>
+                    </ul>
+                    <div class="civi-package-choose">
+                        <?php if ($user_candidate_package_id == $candidate_package_id && $d1 > $d2) { ?>
+                            <span class="civi-button button-block"><?php esc_html_e('Package Actived', 'civi-framework'); ?></span>
+                        <?php } else { ?>
+                            <a href="<?php echo esc_url($payment_process_link); ?>"
+                               class="civi-button button-outline button-block"><?php esc_html_e('Get Started', 'civi-framework'); ?></a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+    </div>
+</div>
