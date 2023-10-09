@@ -24,7 +24,7 @@ $form = 'submit-jobs';
 $action = 'add_jobs';
 $jobs_id = get_the_ID();
 
-global $current_user, $hide_jobs_fields, $hide_jobs_group_fields;
+global $current_user, $hide_jobs_fields, $hide_jobs_group_fields, $hide_company_fields;
 $hide_jobs_fields = civi_get_option('hide_jobs_fields', array());
 if (!is_array($hide_jobs_fields)) {
     $hide_jobs_fields = array();
@@ -33,11 +33,19 @@ $hide_jobs_group_fields = civi_get_option('hide_jobs_group_fields', array());
 if (!is_array($hide_jobs_group_fields)) {
     $hide_jobs_group_fields = array();
 }
+// -----------------------------------------------------------------------------------
+// Custom code - 27 Sept. 2023
+// -----------------------------------------------------------------------------------
+$hide_company_fields = civi_get_option('hide_company_fields', array());
+if (!is_array($hide_company_fields)) {
+    $hide_company_fields = array();
+}
+// -----------------------------------------------------------------------------------
 $jobs_salary_active   = civi_get_option('enable_single_jobs_salary', '1');
 if ($jobs_salary_active) {
-    $layout = array('general', 'salary', 'apply', 'company', 'location', 'thumbnail', 'gallery', 'video');
+    $layout = array('general', 'salary', 'location', 'apply', 'company', 'thumbnail', 'gallery', 'video');
 } else {
-    $layout = array('general', 'apply', 'company', 'location', 'thumbnail', 'gallery', 'video');
+    $layout = array('general', 'apply', 'location', 'company', 'thumbnail', 'gallery', 'video');
 }
 
 wp_get_current_user();
@@ -102,7 +110,7 @@ if ($paid_submission_type == 'per_package') {
                     <div class="col-lg-8 col-md-7">
                         <div class="submit-jobs-header civi-submit-header">
                             <div class="entry-title">
-                                <h4><?php esc_html_e('Create a job post', 'civi-framework') ?></h4>
+                                <h4><?php esc_html_e('Create Job Post', 'civi-framework') ?></h4>
                             </div>
                             <div class="button-warpper">
                                 <a href="<?php echo civi_get_permalink('jobs_dashboard'); ?>" class="civi-button button-link">
@@ -122,28 +130,22 @@ if ($paid_submission_type == 'per_package') {
                                 <?php } ?>
                             </div>
                         </div>
-                        <div class="submit-jobs-header civi-submit-header" style="padding:0;">
-                            <div class="button-warpper text-left" style="color: red; margin-bottom: 10px;">
-								* New employers, kindly create a company profile before posting job listings
-                                <a href="<?php echo get_permalink(civi_get_option('civi_submit_company_page_id')); ?>" class="civi-button button-link" company><i class="fal fa-angle-right"></i><?php esc_html_e('Create new company', 'civi-framework'); ?></a>
-                            </div>
-                        </div>
                         <?php foreach ($layout as $value) {
                             switch ($value) {
                                 case 'general':
-                                    $name = esc_html__('Basic info', 'civi-framework');
+                                    $name = esc_html__('Basic Info', 'civi-framework');
                                     break;
                                 case 'salary':
                                     $name = esc_html__('Salary', 'civi-framework');
                                     break;
                                 case 'apply':
-                                    $name = esc_html__('Job apply type', 'civi-framework');
+                                    $name = esc_html__('Job Apply Type', 'civi-framework');
                                     break;
                                 case 'company':
                                     $name = esc_html__('Company', 'civi-framework');
                                     break;
                                 case 'location':
-                                    $name = esc_html__('Location', 'civi-framework');
+                                    $name = esc_html__('Job Location', 'civi-framework');
                                     break;
                                 case 'thumbnail':
                                     $name = esc_html__('Cover Image', 'civi-framework');
@@ -186,7 +188,6 @@ if ($paid_submission_type == 'per_package') {
                                 <div class="info-jobs-warpper">
                                     <?php esc_html_e('by', 'civi-framework'); ?>
                                     <span class="name-company" data-name="<?php esc_attr_e('Company Name', 'civi-framework') ?>"><?php esc_html_e('Company Name', 'civi-framework'); ?></span>
-                                    
                                     <?php esc_html_e('in', 'civi-framework'); ?>
                                     <span class="cate-about" data-cate="<?php esc_attr_e('Category', 'civi-framework') ?>"><?php esc_html_e('Category', 'civi-framework'); ?></span>
                                     <div class="label-warpper">

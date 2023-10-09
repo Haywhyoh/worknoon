@@ -7,7 +7,7 @@ $user_id = $current_user->ID;
 $jobs_user_select_apply = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_user_select_apply', true);
 $jobs_user_apply_email = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_user_apply_email', true);
 $jobs_user_apply_call_to = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_user_apply_call_to', true);
-$jobs_user_apply_external_link = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_user_apply_external_link', true);
+$jobs_user_apply_external = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_user_apply_external', true);
 
 $hide_jobs_apply = civi_get_option('hide_jobs_apply_fields');
 if (empty($hide_jobs_apply)) {
@@ -36,10 +36,10 @@ if (empty($hide_jobs_apply)) {
                         echo 'selected';
                     } ?> value="call-to"><?php esc_html_e('Call To Apply', 'civi-framework') ?></option>
                 <?php endif; ?>
-				  <?php if (!in_array('fields_jobs_apply_external_link', $hide_jobs_apply)) : ?>
-                    <option <?php if ($jobs_user_select_apply == "external-link") {
+				  <?php if (!in_array('fields_jobs_apply_external', $hide_jobs_apply)) : ?>
+                    <option <?php if ($jobs_user_select_apply == "external") {
                         echo 'selected';
-                    } ?> value="external-link"><?php esc_html_e('External Link', 'civi-framework') ?></option>
+                    } ?> value="external"><?php esc_html_e('External Link', 'civi-framework') ?></option>
                 <?php endif; ?>
             </select>
         </div>
@@ -72,11 +72,11 @@ if (empty($hide_jobs_apply)) {
             </div>
         </div>
     <?php endif; ?>
-	 <?php if (!in_array('fields_jobs_apply_external_link', $hide_jobs_apply)) : ?>
-        <div class="civi-section-apply-select form-group col-md-6" id="external-link">
-            <label for="jobs_apply_external_link"><?php esc_html_e('External Link', 'civi-framework') ?></label>
-            <input type="url" id="jobs_apply_external_link" name="jobs_apply_external_link"
-                   value="<?php echo esc_url($jobs_user_apply_external_link) ?>"
+	 <?php if (!in_array('fields_jobs_apply_external', $hide_jobs_apply)) : ?>
+        <div class="civi-section-apply-select form-group col-md-6" id="external">
+            <label for="jobs_apply_external"><?php esc_html_e('External Link', 'civi-framework') ?></label>
+            <input type="url" id="jobs_apply_external" name="jobs_apply_external"
+                   value="<?php echo esc_url($jobs_user_apply_external) ?>"
                    placeholder="<?php esc_attr_e('Enter external link', 'civi-framework') ?>">
         </div>
     <?php endif; ?>

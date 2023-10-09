@@ -61,6 +61,24 @@
 			// 	return false;
 			// });
         });
+		
+		// -------------------------------------------------------------------
+		// Custom Code - 27 Sept. 2023
+		// -------------------------------------------------------------------
+
+		$("#create_company_btn").click(function () {
+			$("#new_company_job_form").removeClass("d-none");
+			$("#select_company_div").addClass("d-none");
+			$("#select_existing_company_btn").removeClass("d-none");
+		});
+
+		$("#select_existing_company_btn").click(function () {
+			$("#new_company_job_form").addClass("d-none");
+			$("#select_company_div").removeClass("d-none");
+			$("#select_existing_company_btn").addClass("d-none");
+		});
+
+		// -------------------------------------------------------------------
 
 		submit_form.validate({
 			ignore: [],
@@ -81,7 +99,7 @@
 					required: true,
 				},
 				jobs_new_location: {
-					isCityName: true,
+					isCityName: false,
 				},
 			},
 			messages: {
@@ -196,7 +214,34 @@
 				jobs_latitude = submit_form.find('input[name="civi_latitude"]').val(),
 				jobs_longtitude = submit_form
 					.find('input[name="civi_longtitude"]')
+					.val(),
+			
+				// -------------------------------------------------------------------------------
+				// Custom Code - 27 Sept. 2023
+				// -------------------------------------------------------------------------------
+				company_title = submit_form.find('input[name="company_title"]').val(),
+				company_categories = submit_form
+					.find('select[name="company_categories"]')
+					.val(),
+				company_des = tinymce.get("company_des").getContent(),
+				company_website = submit_form
+					.find('input[name="company_website"]')
+					.val(),
+				company_phone = submit_form.find('input[name="company_phone"]').val(),
+				company_founded = submit_form
+					.find('select[name="company_founded"]')
+					.val(),
+				company_size = submit_form.find('select[name="company_size"]').val(),
+				company_location = submit_form
+					.find('select[name="company_location"]')
+					.val(),
+				company_avatar_url = submit_form
+					.find('input[name="company_avatar_url"]')
+					.val(),
+				company_avatar_id = submit_form
+					.find('input[name="company_avatar_id"]')
 					.val();
+				// -----------------------------------------------------------------------------
 
 			var additional = {};
 			$("#jobs-submit-additional").each(function () {
@@ -219,74 +264,192 @@
 				});
 			});
 
-			$.ajax({
-				type: "POST",
-				dataType: "json",
-				url: ajax_url,
-				data: {
-					action: "jobs_submit_ajax",
-					jobs_form: jobs_form,
-					jobs_action: jobs_action,
-					jobs_id: jobs_id,
-					jobs_title: jobs_title,
-					jobs_categories: jobs_categories,
-					jobs_type: jobs_type,
-					jobs_skills: jobs_skills,
-					jobs_des: jobs_des,
-					jobs_career: jobs_career,
-					jobs_experience: jobs_experience,
-					jobs_qualification: jobs_qualification,
-					jobs_quantity: jobs_quantity,
-					jobs_gender: jobs_gender,
-					jobs_days_closing: jobs_days_closing,
+			// ---------------------------------------------------------------------------------------
+			// Custom Code - 27 Sept. 2023
+			// ---------------------------------------------------------------------------------------
+			// Check if the company select element is visible. If it is not, then we create
+			// a new company first before creating a new job.
+			// Otherwise, we create the job with the selected company.
 
-					jobs_salary_show: jobs_salary_show,
-					jobs_currency_type: jobs_currency_type,
-					jobs_salary_minimum: jobs_salary_minimum,
-					jobs_salary_maximum: jobs_salary_maximum,
-					jobs_salary_rate: jobs_salary_rate,
-					jobs_minimum_price: jobs_minimum_price,
-					jobs_maximum_price: jobs_maximum_price,
+			var create_new_company = $("#select_company_div").hasClass("d-none");
 
-					jobs_select_apply: jobs_select_apply,
-					jobs_apply_email: jobs_apply_email,
-					jobs_apply_external: jobs_apply_external,
-					jobs_apply_call_to: jobs_apply_call_to,
+			if (create_new_company) {
 
-					jobs_select_company: jobs_select_company,
-					jobs_location: jobs_location,
-					jobs_new_location: jobs_new_location,
-					jobs_thumbnail_url: jobs_thumbnail_url,
-					jobs_thumbnail_id: jobs_thumbnail_id,
-					civi_gallery_ids: civi_gallery_ids,
-					jobs_video_url: jobs_video_url,
-					custom_field_jobs: additional,
+				$.ajax({
+					dataType: "json",
+					url: ajax_url,
+					data: {
+						action: "company_submit_ajax",
+						company_form: "submit-company",
+						company_action: "add_company",
+						
+						company_title: company_title,
+						company_categories: company_categories,
+						company_des: company_des,
+						company_website: company_website,
+						company_founded: company_founded,
+						company_phone: company_phone,
+						company_size: company_size,
+	
+						company_location: company_location,
+	
+						company_avatar_url: company_avatar_url,
+						company_avatar_id: company_avatar_id,
+					},
+					beforeSend: function () {
+						$(".btn-submit-company .btn-loading").fadeIn();
+					},
+					success: function (data) {
+						console.log("company created");
+						console.log(data);
+						$.ajax({
+							type: "POST",
+							dataType: "json",
+							url: ajax_url,
+							data: {
+								action: "jobs_submit_ajax",
+								jobs_form: jobs_form,
+								jobs_action: jobs_action,
+								jobs_id: jobs_id,
+								jobs_title: jobs_title,
+								jobs_categories: jobs_categories,
+								jobs_type: jobs_type,
+								jobs_skills: jobs_skills,
+								jobs_des: jobs_des,
+								jobs_career: jobs_career,
+								jobs_experience: jobs_experience,
+								jobs_qualification: jobs_qualification,
+								jobs_quantity: jobs_quantity,
+								jobs_gender: jobs_gender,
+								jobs_days_closing: jobs_days_closing,
+			
+								jobs_salary_show: jobs_salary_show,
+								jobs_currency_type: jobs_currency_type,
+								jobs_salary_minimum: jobs_salary_minimum,
+								jobs_salary_maximum: jobs_salary_maximum,
+								jobs_salary_rate: jobs_salary_rate,
+								jobs_minimum_price: jobs_minimum_price,
+								jobs_maximum_price: jobs_maximum_price,
+			
+								jobs_select_apply: jobs_select_apply,
+								jobs_apply_email: jobs_apply_email,
+								jobs_apply_external: jobs_apply_external,
+								jobs_apply_call_to: jobs_apply_call_to,
+			
+								jobs_select_company: data["company_id"],
+								jobs_location: jobs_location,
+								jobs_new_location: jobs_new_location,
+								jobs_thumbnail_url: jobs_thumbnail_url,
+								jobs_thumbnail_id: jobs_thumbnail_id,
+								civi_gallery_ids: civi_gallery_ids,
+								jobs_video_url: jobs_video_url,
+								custom_field_jobs: additional,
+			
+								jobs_map_address: jobs_map_address,
+								jobs_map_location: jobs_map_location,
+								jobs_latitude: jobs_latitude,
+								jobs_longtitude: jobs_longtitude,
+			
+								submit_button: submit_button,
+							},
+							beforeSend: function () {
+								if (submit_button == "submit_jobs") {
+									$(".btn-submit-jobs .btn-loading").fadeIn();
+								} else {
+									$(".btn-submit-draft .btn-loading").fadeIn();
+								}
+							},
+							success: function (data) {
+								if (submit_button == "submit_jobs") {
+									$(".btn-submit-jobs .btn-loading").fadeOut();
+									console.log("job created");
+									console.log(data);
+									if (data.success === true) {
+										window.location.href = jobs_dashboard;
+									}
+								} else {
+									$(".btn-submit-draft .btn-loading").fadeOut();
+								}
+							},
+						});
+					},
+				});
 
-					jobs_map_address: jobs_map_address,
-					jobs_map_location: jobs_map_location,
-					jobs_latitude: jobs_latitude,
-					jobs_longtitude: jobs_longtitude,
+			} else {
 
-					submit_button: submit_button,
-				},
-				beforeSend: function () {
-					if (submit_button == "submit_jobs") {
-						$(".btn-submit-jobs .btn-loading").fadeIn();
-					} else {
-						$(".btn-submit-draft .btn-loading").fadeIn();
-					}
-				},
-				success: function (data) {
-					if (submit_button == "submit_jobs") {
-						$(".btn-submit-jobs .btn-loading").fadeOut();
-						if (data.success === true) {
-							window.location.href = jobs_dashboard;
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: ajax_url,
+					data: {
+						action: "jobs_submit_ajax",
+						jobs_form: jobs_form,
+						jobs_action: jobs_action,
+						jobs_id: jobs_id,
+						jobs_title: jobs_title,
+						jobs_categories: jobs_categories,
+						jobs_type: jobs_type,
+						jobs_skills: jobs_skills,
+						jobs_des: jobs_des,
+						jobs_career: jobs_career,
+						jobs_experience: jobs_experience,
+						jobs_qualification: jobs_qualification,
+						jobs_quantity: jobs_quantity,
+						jobs_gender: jobs_gender,
+						jobs_days_closing: jobs_days_closing,
+	
+						jobs_salary_show: jobs_salary_show,
+						jobs_currency_type: jobs_currency_type,
+						jobs_salary_minimum: jobs_salary_minimum,
+						jobs_salary_maximum: jobs_salary_maximum,
+						jobs_salary_rate: jobs_salary_rate,
+						jobs_minimum_price: jobs_minimum_price,
+						jobs_maximum_price: jobs_maximum_price,
+	
+						jobs_select_apply: jobs_select_apply,
+						jobs_apply_email: jobs_apply_email,
+						jobs_apply_external: jobs_apply_external,
+						jobs_apply_call_to: jobs_apply_call_to,
+	
+						jobs_select_company: jobs_select_company,
+						jobs_location: jobs_location,
+						jobs_new_location: jobs_new_location,
+						jobs_thumbnail_url: jobs_thumbnail_url,
+						jobs_thumbnail_id: jobs_thumbnail_id,
+						civi_gallery_ids: civi_gallery_ids,
+						jobs_video_url: jobs_video_url,
+						custom_field_jobs: additional,
+	
+						jobs_map_address: jobs_map_address,
+						jobs_map_location: jobs_map_location,
+						jobs_latitude: jobs_latitude,
+						jobs_longtitude: jobs_longtitude,
+	
+						submit_button: submit_button,
+					},
+					beforeSend: function () {
+						if (submit_button == "submit_jobs") {
+							$(".btn-submit-jobs .btn-loading").fadeIn();
+						} else {
+							$(".btn-submit-draft .btn-loading").fadeIn();
 						}
-					} else {
-						$(".btn-submit-draft .btn-loading").fadeOut();
-					}
-				},
-			});
+					},
+					success: function (data) {
+						if (submit_button == "submit_jobs") {
+							$(".btn-submit-jobs .btn-loading").fadeOut();
+							if (data.success === true) {
+								window.location.href = jobs_dashboard;
+							}
+						} else {
+							$(".btn-submit-draft .btn-loading").fadeOut();
+						}
+					},
+				});
+
+			}		
+			// ------------------------------------------------------------------------------------
+			// End Custom Code
+			// ------------------------------------------------------------------------------------
 		}
 
 		$( '.ai-helper' ).on( 'click', function(e) {

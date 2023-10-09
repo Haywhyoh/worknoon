@@ -35,13 +35,13 @@ $jobs_user_minimum_price = get_user_meta($user_id, CIVI_METABOX_PREFIX . 'jobs_u
             <label for="jobs_salary_minimum"><?php esc_html_e('Minimum', 'civi-framework'); ?></label>
             <input type="text" id="jobs_salary_minimum" name="jobs_salary_minimum" pattern="^[0-9]+[Kk]?$"
                    value="<?php echo $jobs_user_salary_minimum; ?>">
-            <p>Add 'K' to indicate thousands (e.g., 50K)</p>
+            
         </div>
         <div class="form-group col-md-6">
             <label for="jobs_salary_maximum"><?php esc_html_e('Maximum', 'civi-framework'); ?></label>
             <input type="text" id="jobs_salary_maximum" name="jobs_salary_maximum" pattern="^[0-9]+[Kk]?$"
                    value="<?php echo $jobs_user_salary_maximum; ?>">
-            <p>Add 'K' to indicate thousands (e.g., 80K)</p>
+           
         </div>
     </div>
     <div class="civi-section-salary-select col-md-6" id="starting_amount">

@@ -1,2 +1,0 @@
-# worknoon
-A worknoon project

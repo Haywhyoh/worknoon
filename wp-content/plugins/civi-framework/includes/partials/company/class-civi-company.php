@@ -525,7 +525,7 @@ if (!class_exists('Civi_Company')) {
 					if (!empty($new_company['post_title'])) {
 						$company_id = wp_insert_post($new_company, true);
 					}
-					echo json_encode(array('success' => true));
+					echo json_encode(array('success' => true, 'company_id' => $company_id));
 				} elseif ($submit_action == 'edit-company') {
 					$company_id        = absint(wp_unslash($company_id));
 					$company = get_post($company_id);
